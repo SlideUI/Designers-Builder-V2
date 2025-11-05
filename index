@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Designers Builder V2 (Optional Upgrade)</title>
+  <style>
+    body {
+      font-family: 'Inter', Arial, sans-serif;
+      background: #F5F7FA;
+      margin: 0;
+      padding: 40px 20px;
+      color: #252C32;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    h1 {
+      font-size: 36px;
+      font-weight: 700;
+      letter-spacing: -1px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 20px;
+      color: #45535E;
+      max-width: 700px;
+      line-height: 1.5;
+      margin-bottom: 30px;
+    }
+
+    .sub-note {
+      background-color: #eef8ff;
+      border: 1px solid #bfdcff;
+      padding: 16px;
+      border-radius: 12px;
+      font-size: 16px;
+      margin-bottom: 40px;
+    }
+
+    .instruction-list {
+      margin-bottom: 40px;
+    }
+
+    .instruction-list li {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .code-box {
+      padding: 14px 20px;
+      background: #fff9e6;
+      border: 2px solid #f0e6c4;
+      border-radius: 12px;
+      font-size: 22px;
+      font-weight: 700;
+      width: fit-content;
+      margin-bottom: 16px;
+    }
+
+    .button {
+      background-color: #1a1a1a;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .copied {
+      color: green;
+      margin-top: 12px;
+      font-size: 16px;
+      display: none;
+    }
+
+    video {
+      width: 100%;
+      max-width: 900px;
+      border-radius: 12px;
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 28px; }
+      p { font-size: 18px; }
+      .instruction-list li { font-size: 16px; }
+      .code-box { font-size: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Designers Builder V2 (Optional Upgrade)</h1>
+
+  <p>This is a <strong>new compressed version</strong> of the Builder. Instead of the traditional layout, it gives you a cleaner, <strong>library-style view</strong> with all blocks pre-connected and responsive across Desktop, Tablet, and Mobile.</p>
+
+  <div class="sub-note">
+    <strong>Before getting started, please make sure you:</strong>
+    <ul class="instruction-list">
+      <li>Click the dropdown inside Figma</li>
+      <li>Select <strong>Duplicate</strong></li>
+      <li>Hit <strong>Publish</strong></li>
+      <li><strong>Switch the system ON</strong></li>
+    </ul>
+  </div>
+
+  <h2>🔐 Access Password</h2>
+  <p>Use this password to unlock the Builder V2 inside Figma:</p>
+  <div class="code-box" id="code">6dH2;8\sV,G5</div>
+  <button class="button" onclick="copyCode()">Copy Code</button>
+  <div class="copied" id="copiedMessage">✅ Code copied to clipboard</div>
+
+  <h2>▶️ Watch the 1-Minute Setup Video</h2>
+  <video controls>
+    <source src="your-video-file.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <p><strong>Need help?</strong> The full tutorial is included at the bottom of your PDF download.</p>
+
+  <script>
+    function copyCode() {
+      const code = document.getElementById('code').textContent;
+      navigator.clipboard.writeText(code).then(() => {
+        document.getElementById('copiedMessage').style.display = 'block';
+      });
+    }
+  </script>
+
+</body>
+</html>
