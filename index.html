@@ -5,122 +5,161 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Designers Builder V2 (Optional Upgrade)</title>
   <style>
+    :root {
+      --bg: #f7f9fb;
+      --text: #1f1f1f;
+      --subtext: #4b5563;
+      --accent: #2563eb;
+      --card-bg: #ffffff;
+      --border: #e5e7eb;
+    }
+
     body {
-      font-family: 'Inter', Arial, sans-serif;
-      background: #F5F7FA;
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      background: var(--bg);
       margin: 0;
-      padding: 40px 20px;
-      color: #252C32;
-      max-width: 900px;
-      margin-left: auto;
-      margin-right: auto;
+      padding: 60px 24px;
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    main {
+      max-width: 880px;
+      margin: 0 auto;
     }
 
     h1 {
-      font-size: 36px;
+      font-size: 42px;
       font-weight: 700;
-      letter-spacing: -1px;
+      letter-spacing: -0.02em;
       margin-bottom: 20px;
     }
 
     p {
       font-size: 20px;
-      color: #45535E;
+      color: var(--subtext);
+      margin-bottom: 28px;
       max-width: 700px;
-      line-height: 1.5;
-      margin-bottom: 30px;
     }
 
-    .sub-note {
-      background-color: #eef8ff;
-      border: 1px solid #bfdcff;
-      padding: 16px;
-      border-radius: 12px;
-      font-size: 16px;
+    strong { color: var(--text); }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+      padding: 28px 32px;
       margin-bottom: 40px;
     }
 
-    .instruction-list {
-      margin-bottom: 40px;
-    }
-
-    .instruction-list li {
+    ul {
+      margin: 16px 0 0 22px;
+      padding: 0;
       font-size: 18px;
+    }
+
+    li { margin-bottom: 10px; }
+
+    h2 {
+      font-size: 24px;
+      font-weight: 700;
       margin-bottom: 10px;
+      color: var(--text);
     }
 
     .code-box {
-      padding: 14px 20px;
-      background: #fff9e6;
-      border: 2px solid #f0e6c4;
-      border-radius: 12px;
+      background: #f3f4f6;
+      border: 1px solid #e5e7eb;
       font-size: 22px;
-      font-weight: 700;
+      padding: 14px 20px;
+      border-radius: 10px;
+      font-weight: 600;
       width: fit-content;
+      margin-top: 8px;
       margin-bottom: 16px;
     }
 
     .button {
-      background-color: #1a1a1a;
-      color: white;
+      background: var(--accent);
+      color: #fff;
       border: none;
-      padding: 10px 20px;
+      padding: 10px 22px;
       border-radius: 8px;
       font-size: 16px;
       cursor: pointer;
+      transition: background 0.2s ease;
     }
 
+    .button:hover { background: #1e4ed8; }
+
     .copied {
-      color: green;
-      margin-top: 12px;
+      color: #16a34a;
       font-size: 16px;
+      margin-top: 10px;
       display: none;
     }
 
     video {
       width: 100%;
-      max-width: 900px;
-      border-radius: 12px;
-      margin-bottom: 40px;
+      border-radius: 10px;
+      margin-top: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
 
-    @media (max-width: 600px) {
-      h1 { font-size: 28px; }
+    footer {
+      border-top: 1px solid var(--border);
+      margin-top: 80px;
+      padding-top: 24px;
+      font-size: 14px;
+      color: #6b7280;
+    }
+
+    @media (max-width: 700px) {
+      body { padding: 40px 16px; }
+      h1 { font-size: 32px; }
       p { font-size: 18px; }
-      .instruction-list li { font-size: 16px; }
+      .card { padding: 24px 20px; }
       .code-box { font-size: 20px; }
     }
   </style>
 </head>
 <body>
+  <main>
+    <h1>Designers Builder V2 (Optional Upgrade)</h1>
+    <p>This is a <strong>new compressed version</strong> of the Builder. Instead of the traditional layout, it gives you a cleaner, <strong>library-style view</strong> with all blocks pre-connected and responsive across Desktop, Tablet, and Mobile.</p>
 
-  <h1>Designers Builder V2 (Optional Upgrade)</h1>
+    <div class="card">
+      <h2>🔧 Before Getting Started</h2>
+      <p>Please make sure you:</p>
+      <ul>
+        <li>Click the dropdown inside Figma</li>
+        <li>Select <strong>Duplicate</strong></li>
+        <li>Hit <strong>Publish</strong></li>
+        <li><strong>Switch the system ON</strong></li>
+      </ul>
+    </div>
 
-  <p>This is a <strong>new compressed version</strong> of the Builder. Instead of the traditional layout, it gives you a cleaner, <strong>library-style view</strong> with all blocks pre-connected and responsive across Desktop, Tablet, and Mobile.</p>
+    <div class="card">
+      <h2>🔐 Access Password</h2>
+      <p>Use this password to unlock the Builder V2 inside Figma:</p>
+      <div class="code-box" id="code">6dH2;8\sV,G5</div>
+      <button class="button" onclick="copyCode()">Copy Code</button>
+      <div class="copied" id="copiedMessage">✅ Code copied to clipboard</div>
+    </div>
 
-  <div class="sub-note">
-    <strong>Before getting started, please make sure you:</strong>
-    <ul class="instruction-list">
-      <li>Click the dropdown inside Figma</li>
-      <li>Select <strong>Duplicate</strong></li>
-      <li>Hit <strong>Publish</strong></li>
-      <li><strong>Switch the system ON</strong></li>
-    </ul>
-  </div>
+    <div class="card">
+      <h2>▶️ Watch the 1-Minute Setup Video</h2>
+      <video controls>
+        <source src="your-video-file.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
 
-  <h2>🔐 Access Password</h2>
-  <p>Use this password to unlock the Builder V2 inside Figma:</p>
-  <div class="code-box" id="code">6dH2;8\sV,G5</div>
-  <button class="button" onclick="copyCode()">Copy Code</button>
-  <div class="copied" id="copiedMessage">✅ Code copied to clipboard</div>
+    <p><strong>Need help?</strong> The full tutorial is included at the bottom of your PDF download.</p>
 
-  <h2>▶️ Watch the 1-Minute Setup Video</h2>
-  <video controls>
-    <source src="your-video-file.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-
-  <p><strong>Need help?</strong> The full tutorial is included at the bottom of your PDF download.</p>
+    <footer>© Dose Creative 2025 — All rights reserved.</footer>
+  </main>
 
   <script>
     function copyCode() {
@@ -130,6 +169,5 @@
       });
     }
   </script>
-
 </body>
 </html>
