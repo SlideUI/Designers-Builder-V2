@@ -16,7 +16,9 @@
       --gap-lg:40px;
       --gap-md:24px;
     }
+
     *{box-sizing:border-box}
+
     body{
       font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;
       margin:0;
@@ -25,13 +27,27 @@
       line-height:1.6;
       padding:64px 24px;
     }
+
     main{max-width:880px;margin:0 auto}
+
     h1{
-      font-size:42px;font-weight:800;letter-spacing:-.02em;margin:0 0 18px
+      font-size:42px;
+      font-weight:800;
+      letter-spacing:-.02em;
+      margin:0 0 18px;
     }
-    p{font-size:20px;color:var(--muted);margin:0 0 var(--gap-lg);max-width:720px}
+
+    p{
+      font-size:20px;
+      color:var(--muted);
+      margin:0 0 var(--gap-lg);
+      max-width:720px;
+    }
+
     strong{color:var(--text)}
+
     .section{margin-bottom:var(--gap-xl)}
+
     .card{
       background:var(--card);
       border:1px solid var(--line);
@@ -39,12 +55,23 @@
       padding:28px 32px;
       box-shadow:0 2px 8px rgba(0,0,0,.04);
     }
+
     h2{
-      font-size:24px;font-weight:750;margin:0 0 10px
+      font-size:24px;
+      font-weight:750;
+      margin:0 0 10px;
     }
+
     .card p{margin:0 0 var(--gap-md)}
-    .card ul{margin:10px 0 0 22px;padding:0;font-size:18px}
+
+    .card ul{
+      margin:10px 0 0 22px;
+      padding:0;
+      font-size:18px;
+    }
+
     .card li{margin:0 0 10px}
+
     .code-box{
       display:inline-block;
       background:#f3f4f6;
@@ -55,6 +82,7 @@
       font-weight:700;
       margin:8px 0 14px;
     }
+
     .button{
       display:inline-block;
       background:var(--text);
@@ -67,21 +95,27 @@
       transition:opacity .2s ease;
       margin:6px 0 0;
     }
+
     .button:hover{opacity:.9}
+
     .copied{
       color:#16a34a;
       font-size:16px;
       margin-top:10px;
       display:none;
     }
+
     .video-wrap{margin-top:var(--gap-md)}
+
     .video-wrap video{
       width:100%;
       border-radius:12px;
-      box-shadow:0 2px 10px rgba(0,0,0,.05)
+      box-shadow:0 2px 10px rgba(0,0,0,.05);
     }
+
     a{text-decoration:none;color:var(--accent)}
     a:hover{text-decoration:underline}
+
     footer{
       border-top:1px solid var(--line);
       margin-top:72px;
@@ -89,6 +123,7 @@
       font-size:14px;
       color:#6b7280;
     }
+
     @media (max-width:720px){
       body{padding:44px 16px}
       h1{font-size:34px}
@@ -101,12 +136,17 @@
 </head>
 <body>
   <main>
-
+    <!-- Header -->
     <header class="section">
       <h1>Designers Builder V2 (Optional Upgrade)</h1>
-      <p>This is a <strong>new compressed version</strong> of the Builder. Instead of the traditional layout, it gives you a cleaner, <strong>library-style view</strong> with all blocks pre-connected and responsive across Desktop, Tablet, and Mobile.</p>
+      <p>
+        This is a <strong>new compressed version</strong> of the Builder. Instead of the traditional layout,
+        it gives you a cleaner, <strong>library-style view</strong> with all blocks pre-connected and responsive
+        across Desktop, Tablet, and Mobile.
+      </p>
     </header>
 
+    <!-- Password -->
     <section class="section">
       <div class="card">
         <h2>🔐 Access Password</h2>
@@ -117,6 +157,7 @@
       </div>
     </section>
 
+    <!-- Builder file links -->
     <section class="section">
       <div class="card">
         <h2>📁 Duplicate & Publish Each Builder File</h2>
@@ -135,23 +176,28 @@
       </div>
     </section>
 
+    <!-- Video -->
     <section class="section">
       <div class="card">
         <h2>▶️ Watch the 1-Minute Setup Video</h2>
         <div class="video-wrap">
           <video controls>
-            <source src="/mnt/data/Tutorial.mp4" type="video/mp4">
+            <!-- Use the public GitHub Pages URL OR just "Tutorial.mp4" if it's in the same folder -->
+            <source src="https://slideui.github.io/Designers-Builder-V2/Tutorial.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
         </div>
       </div>
     </section>
 
+    <!-- Help link -->
     <p><strong>Need help?</strong> Full tutorial walkthroughs are available here:<br>
-    <a href="https://slideui.github.io/designer-builder-tutorials/" target="_blank">https://slideui.github.io/designer-builder-tutorials/</a></p>
+      <a href="https://slideui.github.io/designer-builder-tutorials/" target="_blank">
+        https://slideui.github.io/designer-builder-tutorials/
+      </a>
+    </p>
 
     <footer>© Dose Creative 2025 — All rights reserved.</footer>
-
   </main>
 
   <script>
