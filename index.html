@@ -8,7 +8,7 @@
     :root{
       --bg:#f7f9fb;
       --text:#1f1f1f;
-      --muted:#4b5563;
+      --muted:#44b5563;
       --accent:#2563eb;
       --card:#ffffff;
       --line:#e5e7eb;
@@ -34,7 +34,6 @@
     p{font-size:20px;color:var(--muted);margin:0 0 var(--gap-lg);max-width:720px}
     strong{color:var(--text)}
 
-    /* Section stack helper */
     .section{margin-bottom:var(--gap-xl)}
 
     .card{
@@ -129,7 +128,7 @@
         <h2>▶️ Watch the 1-Minute Setup Video</h2>
         <div class="video-wrap">
           <video controls>
-            <source src="your-video-file.mp4" type="video/mp4">
+            <source src="sandbox:/mnt/data/Tutorial.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
         </div>
@@ -148,3 +147,7 @@
       navigator.clipboard.writeText(code).then(()=>{
         document.getElementById('copiedMessage').style.display='block';
       });
+    }
+  </script>
+</body>
+</html>
